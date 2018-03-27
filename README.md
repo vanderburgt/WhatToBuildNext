@@ -1,0 +1,2 @@
+# WhatToBuildNext
+Frontend for WhatToBuildNext
