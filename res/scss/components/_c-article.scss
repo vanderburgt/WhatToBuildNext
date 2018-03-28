@@ -1,0 +1,61 @@
+.c-article {
+  margin: 25px 0 0;
+  @include res(desktop) {
+    margin: 40px 0 0;
+  }
+
+  h2 {
+    font-size: 19px;
+    line-height: 50px;
+    border-bottom: solid 1px $gray-border;
+    margin: 0 0 10px;
+    @include res(desktop) {
+      font-size: 26px;
+      margin: 0 0 15px;
+    }
+  }
+
+  p {
+    font-size: 15px;
+    line-height: 24px;
+    margin: 10px 0;
+    @include res(desktop) {
+      margin: 15px 0;
+    }
+  }
+
+  a:not(.c-icon-link) {
+    color: $light-blue;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &:visited {
+      color: $purple;
+    }
+  }
+
+  blockquote {
+    color: $gray-quote;
+    font-style: italic;
+    font-size: 15px;
+    line-height: 25px;
+    margin: 30px 0 0;
+    padding-left: 17px;
+    border-left: solid 2px $gray-border2;
+    @include res(desktop) {
+      margin: 45px 0 0;
+    }
+  }
+
+  &__control {
+    float: right;
+
+    svg {
+      margin-left: 6px;
+      vertical-align: -10%;
+    }
+  }
+}

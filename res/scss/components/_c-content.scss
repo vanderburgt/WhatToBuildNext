@@ -1,8 +1,38 @@
 .c-content {
   @extend %container;
-  padding: 40px;
+  padding: 20px;
   @include res(desktop) {
     max-width: 1440px;
     min-height: calc(100% - 191px);
+    padding: 60px 40px;
+  }
+
+  &__post {
+    @include res(desktop) {
+      padding-right: 370px;
+    }
+
+    h1 {
+      font-size: 23px;
+      font-weight: 700;
+      line-height: 29px;
+      margin: 0 0 17px;
+      @include res(desktop) {
+        font-size: 35px;
+        line-height: 43px;
+        margin: 0 0 19px;
+      }
+    }
+
+    p {
+      font-size: 15px;
+      line-height: 22px;
+      margin: 17px 0;
+      @include res(desktop) {
+        font-size: 16px;
+        line-height: 24px;
+        margin: 19px 0;
+      }
+    }
   }
 }
