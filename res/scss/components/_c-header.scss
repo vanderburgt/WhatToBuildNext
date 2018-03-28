@@ -1,4 +1,5 @@
 .c-header {
+  @extend %container;
   height: 79px;
   @include res(desktop) {
     border-bottom: solid 1px $gray-border;
@@ -6,7 +7,6 @@
   }
 
   &__inner {
-    @extend %container;
     background: $white;
     height: 79px;
     padding: 0;

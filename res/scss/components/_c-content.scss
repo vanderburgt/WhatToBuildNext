@@ -2,6 +2,7 @@
   @extend %container;
   padding: 40px;
   @include res(desktop) {
+    max-width: 1440px;
     min-height: calc(100% - 191px);
   }
 }

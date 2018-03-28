@@ -13,6 +13,9 @@
       padding: 40px 20px;
       width: 50%;
     }
+    @include res(xxlarge) {
+      width: 33.3333333%;
+    }
   }
 
   &__pic {
