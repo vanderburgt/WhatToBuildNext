@@ -12,15 +12,28 @@
 
   &__post {
     padding: 20px 20px 0;
+    text-decoration: none;
+    color: $black;
     @include res(tablet) {
       padding: 20px 10px 0;
       width: 50%;
     }
     @include res(desktop) {
-      padding: 40px 20px;
+      margin: 20px 0;
+      padding: 20px 20px;
+      transition: box-shadow .3s ease;
     }
     @include res(xxlarge) {
       width: 33.3333333%;
+    }
+
+    &:hover {
+      @include res(desktop) {
+        box-shadow: 0 0 10px 2px $black-transparent;
+        .c-posts__img {
+          transform: scale(1.1);
+        }
+      }
     }
   }
 
@@ -28,10 +41,14 @@
     position: relative;
     font-size: 0;
     line-height: 0;
+    overflow: hidden;
   }
 
   &__img {
     width: 100%;
+    @include res(desktop) {
+      transition: transform .3s ease;
+    }
   }
 
   &__time {
