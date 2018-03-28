@@ -1,7 +1,7 @@
 {
-  "name": "edgepark",
+  "name": "WhatToBuildNext",
   "version": "1.0.0",
-  "description": "edgepark website",
+  "description": "WhatToBuildNext website",
   "devDependencies": {
     "autoprefixer": "^6.7.7",
     "chalk": "^1.1.3",
