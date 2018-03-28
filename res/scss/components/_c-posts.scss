@@ -1,6 +1,6 @@
 .c-posts {
   @extend %container;
-  padding: 0;
+  padding: 0 0 20px;
   @include res(tablet) {
     padding: 0 60px 20px;
     display: flex;
@@ -50,15 +50,24 @@
   }
 
   &__title {
-    font-size: 27px;
+    font-size: 18px;
     font-weight: 700;
-    line-height: 33px;
-    margin: 20px 0 9px;
+    line-height: 22px;
+    margin: 10px 0 5px;
+    @include res(tablet) {
+      font-size: 27px;
+      line-height: 33px;
+      margin: 20px 0 9px;
+    }
   }
 
   &__about {
     color: $dark-gray;
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 15px;
+    line-height: 22px;
+    @include res(tablet) {
+      font-size: 16px;
+      line-height: 24px;
+    }
   }
 }

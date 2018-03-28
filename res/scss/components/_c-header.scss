@@ -1,14 +1,17 @@
 .c-header {
-  border-bottom: solid 1px $gray-border;
-  height: 90px;
+  height: 79px;
+  @include res(desktop) {
+    border-bottom: solid 1px $gray-border;
+    height: 90px;
+  }
 
   &__inner {
     @extend %container;
     background: $white;
-    height: 90px;
-    margin: 0 0 -1px;
+    height: 79px;
     padding: 0;
     @include res(desktop) {
+      height: 90px;
       padding: 0 40px;
     }
   }
@@ -18,14 +21,22 @@
     color: $white;
     display: inline-block;
     float: left;
-    width: 213px;
-    height: 90px;
-    font-size: 22px;
-    line-height: 20px;
+    width: 173px;
+    height: 79px;
+    font-size: 18px;
+    line-height: 18px;
     font-weight: 700;
-    padding: 35px 0 0 40px;
+    padding: 28px 0 0 20px;
     text-decoration: none;
     transition: background .3s ease;
+    @include res(desktop) {
+      width: 213px;
+      height: 90px;
+      font-size: 22px;
+      line-height: 20px;
+      padding: 35px 0 0 40px;
+    }
+
     &:hover {
       background: $blue;
     }
