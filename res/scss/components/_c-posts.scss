@@ -1,0 +1,64 @@
+.c-posts {
+  @extend %container;
+  padding: 0;
+  @include res(tablet) {
+    padding: 0 60px 20px;
+    display: flex;
+    flex-flow: row wrap;
+    flex-flow: row wrap;
+  }
+
+  &__post {
+    padding: 20px 20px 0;
+    @include res(tablet) {
+      padding: 40px 20px;
+      width: 50%;
+    }
+  }
+
+  &__pic {
+    position: relative;
+    font-size: 0;
+    line-height: 0;
+  }
+
+  &__img {
+    width: 100%;
+  }
+
+  &__time {
+    background: $black;
+    border-radius: 17px;
+    color: $white;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 34px;
+    padding: 0 15px;
+    height: 34px;
+    position: absolute;
+    display: inline-block;
+    right: 15px;
+    bottom: 21px;
+    &--blue {
+      background: $light-blue;
+
+    }
+  }
+  &__svg {
+    margin: 0 4px 0 0;
+    vertical-align: -10%;
+  }
+
+  &__title {
+    font-size: 27px;
+    font-weight: 700;
+    line-height: 33px;
+    margin: 20px 0 9px;
+  }
+
+  &__about {
+    color: $dark-gray;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
