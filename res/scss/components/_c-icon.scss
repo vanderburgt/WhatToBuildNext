@@ -1,0 +1,53 @@
+.c-icon {
+  fill: $black-transparent;
+  transition: fill .3s ease;
+
+  &--black {
+    a:hover > &,
+    a:active > &,
+    button:hover > &,
+    button:active > & {
+      fill: $black;
+    }
+  }
+
+  &--twitter {
+    a:hover > &,
+    a:active > &,
+    button:hover > &,
+    button:active > & {
+      fill: $twitter;
+    }
+  }
+
+  &--linkedin {
+    a:hover > &,
+    a:active > &,
+    button:hover > &,
+    button:active > & {
+      fill: $linkedin;
+    }
+  }
+
+  &--reddit {
+    a:hover > &,
+    a:active > &,
+    button:hover > &,
+    button:active > & {
+      fill: $reddit;
+    }
+  }
+
+  &--facebook {
+    a:hover > &,
+    a:active > &,
+    button:hover > &,
+    button:active > & {
+      fill: $facebook;
+    }
+  }
+
+  &--lightning {
+    fill: $yellow;
+  }
+}

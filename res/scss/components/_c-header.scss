@@ -1,5 +1,4 @@
 .c-header {
-  height: inherit;
 
   &__inner {
     @extend %container;
@@ -8,5 +7,19 @@
 
   &__logo {
     margin: 0;
+  }
+
+  &__slogan {
+
+  }
+
+  &__menu {
+
+  }
+  &__menu-li {
+
+  }
+  &__menu-a {
+
   }
 }
