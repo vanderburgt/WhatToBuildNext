@@ -5,7 +5,6 @@
     padding: 0 20px 20px;
     display: flex;
     flex-flow: row wrap;
-    flex-flow: row wrap;
   }
 
   &__post {
@@ -39,11 +38,13 @@
     display: inline-block;
     right: 15px;
     bottom: 21px;
+
     &--blue {
       background: $light-blue;
 
     }
   }
+
   &__svg {
     margin: 0 4px 0 0;
     vertical-align: -10%;

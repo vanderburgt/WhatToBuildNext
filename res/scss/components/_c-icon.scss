@@ -2,52 +2,34 @@
   fill: $black-transparent;
   transition: fill .3s ease;
 
-  &--black {
-    a:hover > &,
-    a:active > &,
-    button:hover > &,
-    button:active > & {
-      fill: $black;
-    }
-  }
-
-  &--twitter {
-    a:hover > &,
-    a:active > &,
-    button:hover > &,
-    button:active > & {
-      fill: $twitter;
-    }
-  }
-
-  &--linkedin {
-    a:hover > &,
-    a:active > &,
-    button:hover > &,
-    button:active > & {
-      fill: $linkedin;
-    }
-  }
-
-  &--reddit {
-    a:hover > &,
-    a:active > &,
-    button:hover > &,
-    button:active > & {
-      fill: $reddit;
-    }
-  }
-
-  &--facebook {
-    a:hover > &,
-    a:active > &,
-    button:hover > &,
-    button:active > & {
-      fill: $facebook;
-    }
-  }
-
   &--lightning {
     fill: $yellow;
+  }
+}
+
+.c-icon-link {
+  &:hover > .c-icon--black,
+  &:active > .c-icon--black {
+    fill: $black;
+  }
+
+  &:hover > .c-icon--twitter,
+  &:active > .c-icon--twitter {
+    fill: $twitter;
+  }
+
+  &:hover > .c-icon--linkedin,
+  &:active > .c-icon--linkedin {
+    fill: $linkedin;
+  }
+
+  &:hover > .c-icon--reddit,
+  &:active > .c-icon--reddit {
+    fill: $reddit;
+  }
+
+  &:hover > .c-icon--facebook,
+  &:active > .c-icon--facebook {
+    fill: $facebook;
   }
 }

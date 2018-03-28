@@ -1,21 +1,40 @@
 .c-footer {
-  background: transparent;
+  @extend %container;
 
   &__inner {
-    @extend %container;
-    padding: 0;
+    border-top: solid 1px $gray-border;
+    margin: 0 20px;
+    padding: 11px 0 15px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    @include res(desktop) {
+      margin: 0 40px;
+      padding: 26px 0 38px;
+    }
   }
 
   &__copyright {
+    font-size: 15px;
+    line-height: 36px;
   }
 
   &__menu {
-
+    display: none;
+    @include res(desktop) {
+      display: block;
+    }
   }
-  &__menu-li {
 
-  }
   &__menu-a {
+    color: $black;
+    font-size: 15px;
+    line-height: 36px;
+    text-decoration: none;
+    margin: 0 0 0 44px;
 
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }

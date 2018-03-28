@@ -1,5 +1,5 @@
 .c-btn {
-  background: $black;
+  background: $light-green;
   border: 0;
   border-radius: 7px;
   color: $white;
@@ -16,36 +16,9 @@
   text-align: center;
   text-decoration: none;
   white-space: normal;
-  width: auto;
 
-  &::after {
-    background: lighten($black, 10%);
-    content: '';
-    height: 100%;
-    left: -10%;
-    margin: 0 auto;
-    position: absolute;
-    right: -10%;
-    top: 0;
-    transform: skew(25deg);
-    transition: width .2s ease-in-out;
-    width: 0;
-  }
-
-  &:hover {
-    @include res(desktop) {
-      &::after {
-        width: 120%;
-      }
-    }
-  }
 
   &__text {
     position: relative;
-    z-index: 1;
-  }
-
-  &--products {
-    padding: 18px 69px;
   }
 }
