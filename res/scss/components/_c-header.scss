@@ -12,7 +12,6 @@
     padding: 0;
     @include res(desktop) {
       height: 90px;
-      padding: 0 40px;
     }
   }
 
@@ -48,7 +47,7 @@
       display: block;
       border-bottom: solid 1px $gray-border;
       height: 90px;
-      margin-left: 253px;
+      margin: 0 40px 0 253px;
     }
   }
 
