@@ -1,5 +1,8 @@
 .c-footer {
   @extend %container;
+  @include res(desktop) {
+    height: 101px;
+  }
 
   &__inner {
     border-top: solid 1px $gray-border;
@@ -10,7 +13,7 @@
     justify-content: space-between;
     @include res(desktop) {
       margin: 0 40px;
-      padding: 26px 0 38px;
+      padding: 26px 0 0;
     }
   }
 

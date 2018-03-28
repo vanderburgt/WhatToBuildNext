@@ -1,0 +1,7 @@
+.c-content {
+  @extend %container;
+  padding: 40px;
+  @include res(desktop) {
+    min-height: calc(100% - 191px);
+  }
+}

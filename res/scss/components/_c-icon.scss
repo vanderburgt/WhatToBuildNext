@@ -8,6 +8,8 @@
 }
 
 .c-icon-link {
+  text-decoration: none;
+
   &:hover > .c-icon--black,
   &:active > .c-icon--black {
     fill: $black;
