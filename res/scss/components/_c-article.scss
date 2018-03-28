@@ -24,16 +24,18 @@
     }
   }
 
-  a:not(.c-icon-link) {
-    color: $light-blue;
-    text-decoration: none;
+  a {
+    &:not(.c-icon-link) {
+      color: $light-blue;
+      text-decoration: none;
 
-    &:hover {
-      text-decoration: underline;
-    }
+      &:hover {
+        text-decoration: underline;
+      }
 
-    &:visited {
-      color: $purple;
+      &:visited {
+        color: $purple;
+      }
     }
   }
 
