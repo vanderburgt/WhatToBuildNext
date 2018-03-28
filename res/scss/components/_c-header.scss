@@ -1,0 +1,12 @@
+.c-header {
+  height: inherit;
+
+  &__inner {
+    @extend %container;
+    display: inherit;
+  }
+
+  &__logo {
+    margin: 0;
+  }
+}

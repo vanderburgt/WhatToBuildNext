@@ -1,0 +1,44 @@
+<section class="c-selection c-selection--step-2">
+  <div class="c-selection__inner">
+    <h1 class="c-selection__title"><b>Step 2 of 3:</b> Begin The Order Process</h1>
+
+    <h2 class="c-title"><span class="c-title__text">Breast Pump Order Form</span></h2>
+
+    <div class="c-order-form">
+
+      <div class="c-order-form__left">
+        <div class="c-order-form__left-inner">
+          <p class="c-order-form__p">To process your order, we need you to provide the following information:</p>
+          <ul class="c-order-form__ul">
+            <li class="c-order-form__li">Pump selection & baby’s due date</li>
+            <li class="c-order-form__li">Your contact information</li>
+            <li class="c-order-form__li">Your insurance information</li>
+            <li class="c-order-form__li">Your healthcare provider’s information</li>
+          </ul>
+          <p class="c-order-form__p"><img class="c-order-form__p-img" src="assets/img/icon-insurance.png"
+                                          alt="insurance card">Be sure to have your insurance card ready.</p>
+        </div>
+      </div>
+
+      <div class="c-order-form__right">
+
+        <label class="c-order-form__label">Email Address *</label>
+        <input class="c-banner__input" type="text">
+        <label class="c-order-form__label">Baby’s Due Date *</label>
+        <input class="c-banner__input c-banner__input--date" type="text">
+
+        <input class="c-checkbox" type="checkbox" id="checkbox-n" name="checkbox">
+        <label class="c-checkbox-label" for="checkbox-n"></label>
+
+        <p class="c-order-form__right-p">By clicking “Submit”, I agree by electronic signature that: (1)  I understand that consent is not required to
+          make a purchase; and (2) my information will be used as described on this page and in the Edgepark’s Website
+          <a href="#">Privacy Policy</a>.</p>
+
+        <button type="submit" class="c-btn c-btn--order"><span class="c-btn__text">Continue</span></button>
+      </div>
+
+    </div>
+  </div>
+  <!-- Choose -->
+  {% include 'components/_c-choose.html' %}
+</section>

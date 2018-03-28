@@ -1,0 +1,8 @@
+.c-footer {
+  background: transparent;
+
+  &__inner {
+    @extend %container;
+    padding: 0;
+  }
+}

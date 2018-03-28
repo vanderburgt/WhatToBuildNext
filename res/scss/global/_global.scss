@@ -1,0 +1,32 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: $white;
+  color: $default-font-color;
+  font-family: $helvetica-neue;
+  font-size: $default-font-size;
+  line-height: 1.45em;
+  margin: 0;
+  min-width: 1140px;
+  padding: 0;
+
+  &.body-popup {
+    overflow: hidden;
+  }
+}
+
+h1,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
