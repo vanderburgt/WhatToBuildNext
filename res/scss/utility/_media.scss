@@ -26,19 +26,19 @@
       @content;
     }
   } @else if $media == desktop-only {
-    @media (min-width: 992px) and (max-width: 1159px) {
+    @media (min-width: 992px) and (max-width: 1199px) {
       @content;
     }
   } @else if $media == xlarge {
-    @media screen and (min-width: 1160px) {
+    @media screen and (min-width: 1200px) {
       @content;
     }
   } @else if $media == xlarge-only {
-    @media (min-width: 1140px) and (max-width: 1385px) {
+    @media (min-width: 1200px) and (max-width: 1519px) {
       @content;
     }
   } @else if $media == xxlarge {
-    @media screen and (min-width: 1386px) {
+    @media screen and (min-width: 1520px) {
       @content;
     }
   }
@@ -46,7 +46,7 @@
 
 @mixin res-height($media) {
   @if $media == small-phone {
-    @media screen and (min-height: 601px) {
+    @media screen and (min-height: 541px) {
       @content;
     }
   }

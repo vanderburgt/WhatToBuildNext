@@ -14,9 +14,9 @@ body {
   color: $default-font-color;
   font-family: $helvetica-neue;
   font-size: $default-font-size;
-  line-height: 1.45em;
+  line-height: 1.2em;
   margin: 0;
-  min-width: 1140px;
+  min-width: 375px;
   padding: 0;
 
   &.body-popup {
@@ -50,7 +50,7 @@ h3 {
   line-height: 50px;
 }
 
-a {
+/*a {
   color: $blue;
   text-decoration: none;
   @include res(desktop) {
@@ -62,4 +62,4 @@ a {
   &:visited {
     color: $light-blue;
   }
-}
+}*/

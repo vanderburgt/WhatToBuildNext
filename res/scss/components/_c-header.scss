@@ -1,25 +1,78 @@
 .c-header {
+  border-bottom: solid 1px $gray-border;
+  height: 90px;
+  margin: 0 0 40px;
 
   &__inner {
+    background: $white;
+    height: 90px;
+    margin: 0 0 -1px;
+    padding: 0 40px;
     @extend %container;
-    display: inherit;
   }
 
   &__logo {
-    margin: 0;
+    background: $light-blue;
+    color: $white;
+    display: inline-block;
+    float: left;
+    width: 213px;
+    height: 90px;
+    font-size: 22px;
+    line-height: 20px;
+    font-weight: 700;
+    padding: 35px 0 0 40px;
+    text-decoration: none;
+    transition: background .3s ease;
+    &:hover {
+      background: $blue;
+    }
+  }
+
+  &__right {
+    border-bottom: solid 1px $gray-border;
+    height: 90px;
+    margin-left: 253px;
   }
 
   &__slogan {
-
+    color: $gray;
+    font-size: 15px;
+    padding: 36px 0 0;
+    float: left;
   }
 
   &__menu {
-
+    float: right;
+    list-style: none;
+    margin: 0;
+    padding: 36px 0 0;
   }
   &__menu-li {
-
+    margin: 0 0 0 45px;
+    display: inline;
   }
   &__menu-a {
-
+    font-size: 15px;
+    color: $black;
+    text-decoration: none;
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      width: 0;
+      height: 2px;
+      background: $black;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      transition: width .3s ease;
+    }
+    &:hover {
+      &::after {
+        width: 100%;
+      }
+    }
   }
 }

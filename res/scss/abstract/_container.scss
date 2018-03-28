@@ -1,7 +1,7 @@
 %container {
-  margin: 0 auto;
   width: 100%;
   @include res(xlarge) {
-    width: 1140px;
+    margin: 0 auto;
+    max-width: 1520px;
   }
 }
