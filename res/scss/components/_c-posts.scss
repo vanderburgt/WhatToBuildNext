@@ -2,16 +2,22 @@
   @extend %container;
   padding: 0 0 20px;
   @include res(tablet) {
-    padding: 0 20px 20px;
     display: flex;
     flex-flow: row wrap;
+    padding: 0 10px 20px;
+  }
+  @include res(desktop) {
+    padding: 0 20px 20px;
   }
 
   &__post {
     padding: 20px 20px 0;
     @include res(tablet) {
-      padding: 40px 20px;
+      padding: 20px 10px 0;
       width: 50%;
+    }
+    @include res(desktop) {
+      padding: 40px 20px;
     }
     @include res(xxlarge) {
       width: 33.3333333%;
@@ -58,7 +64,7 @@
     font-weight: 700;
     line-height: 22px;
     margin: 10px 0 5px;
-    @include res(tablet) {
+    @include res(desktop) {
       font-size: 27px;
       line-height: 33px;
       margin: 20px 0 9px;
@@ -69,7 +75,7 @@
     color: $dark-gray;
     font-size: 15px;
     line-height: 22px;
-    @include res(tablet) {
+    @include res(desktop) {
       font-size: 16px;
       line-height: 24px;
     }
