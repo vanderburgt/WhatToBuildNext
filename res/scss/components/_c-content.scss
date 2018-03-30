@@ -9,7 +9,7 @@
 
   &__post {
     @include res(desktop) {
-      max-width: 1027px;
+      max-width: 1010px;
     }
 
     h1 {
@@ -36,7 +36,7 @@
     }
   }
 
-  &--aside {
+  &__lside {
     max-width: 1010px;
   }
 }
