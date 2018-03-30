@@ -5,6 +5,7 @@
     max-width: 1440px;
     min-height: calc(100% - 191px);
     padding: 60px 40px;
+    position: relative;
   }
 
   &__post {
@@ -36,7 +37,15 @@
     }
   }
 
-  &__lside {
-    max-width: 1010px;
+  &--aside {
+    overflow: hidden;
+
+    .c-content__post,
+    .c-article {
+      max-width: 1010px;
+      @include res(desktop) {
+        margin-right: 350px;
+      }
+    }
   }
 }

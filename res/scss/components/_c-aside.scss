@@ -1,0 +1,23 @@
+.c-aside {
+  float: right;
+
+  &__inner {
+    width: 310px;
+    padding: 0 0 0 29px;
+    border-left: solid 1px $gray-border;
+    overflow-y: auto;
+    max-height: calc(100vh - 311px);
+    //max-height: calc(100vh - 201px);
+  }
+
+  &--sticky {
+    position: absolute;
+    top: 60px;
+    right: 350px;
+
+    .c-aside__inner {
+      position: fixed;
+      top: 60px;
+    }
+  }
+}

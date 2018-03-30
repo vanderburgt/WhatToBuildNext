@@ -27,6 +27,9 @@
     @include res(xxlarge) {
       width: 33.3333333%;
     }
+    @include res(xxxlarge) {
+      width: 25%;
+    }
 
     &:hover {
       @include res(desktop) {
@@ -47,6 +50,7 @@
   }
 
   &__img {
+    border: 0;
     width: 100%;
     @include res(desktop) {
       transition: transform .3s ease;
@@ -62,14 +66,16 @@
     line-height: 34px;
     padding: 0 15px;
     height: 34px;
-    position: absolute;
     display: inline-block;
-    right: 15px;
-    bottom: 21px;
 
     &--blue {
       background: $light-blue;
+    }
 
+    &--post {
+      position: absolute;
+      right: 15px;
+      bottom: 21px;
     }
   }
 
