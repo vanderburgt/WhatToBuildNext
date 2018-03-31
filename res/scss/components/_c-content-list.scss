@@ -70,6 +70,7 @@
   &__toggle {
     display: none;
     @include res(phone-tablet-only) {
+      cursor: pointer;
       display: inline-block;
       position: absolute;
       top: 9px;
@@ -77,6 +78,12 @@
       line-height: 0;
       font-size: 0;
       padding: 10px;
+
+      &:hover {
+        .c-icon {
+          fill: $black;
+        }
+      }
 
       .c-icon {
         fill: $gray-quote;

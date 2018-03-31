@@ -21,17 +21,25 @@
 
     // hide last coma in Content list
     if ($('.c-content-list').length) {
-      $('.c-content-list').each(function (index, el) {
+      $('.c-content-list').each(function (i, el) {
         $(el).find('a').last().addClass('c-content-list__last-a')
       });
     }
 
     // toggle Content list
     if ($('.c-content-list__toggle')) {
-      $('.c-content-list__toggle').on('click', function (event) {
-        event.preventDefault();
+      $('.c-content-list__toggle').on('click', function (e) {
+        e.preventDefault();
         $(this).parent().toggleClass('c-content-list--collapsed');
       });
     }
+
+    // burger menu toggle
+    $('#js-c-burger, #js-c-burger-close').on('click', function (e) {
+      e.preventDefault();
+      $('body').toggleClass('body__mm-active');
+      $('#js-mm').toggleClass('c-mm--active');
+    });
+
   });
 })(window, document);
