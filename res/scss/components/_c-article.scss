@@ -31,7 +31,7 @@
   }
 
   a {
-    &:not(.c-icon-link):not(.c-btn) {
+    &:not(.c-icon-link) {
       color: $light-blue;
       text-decoration: none;
 

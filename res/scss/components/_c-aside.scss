@@ -80,7 +80,12 @@
 
     .c-icon-link {
       margin-right: 12px;
+
+      &:last-of-type {
+        margin-right: 0;
+      }
     }
+
     .c-icon {
       vertical-align: middle;
     }

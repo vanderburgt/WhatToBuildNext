@@ -3,16 +3,45 @@
   list-style: none;
   font-size: 15px;
   line-height: 32px;
-  margin: 3px 0 20px;
-  background: $light-gray;
-  border: solid 1px $gray-border3;
-  border-radius: 3px;
-  padding: 20px 10px 20px 30px;
-  @include res(desktop) {
-    background: none;
-    border: 0;
-    padding: 0;
-    margin: 20px 0;
+  margin: 20px 0;
+  padding: 0;
+  position: relative;
+  @include res(phone-tablet-only) {
+    background: $light-gray;
+    border: solid 1px $gray-border3;
+    border-radius: 3px;
+    padding: 20px 10px 20px 30px;
+    margin: 3px 0 20px;
+
+    &--collapsed {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      padding: 5px 65px 5px 10px;
+
+      &::before {
+        content: 'Content:';
+      }
+
+      ul,
+      li {
+        display: inline;
+      }
+
+      li > a {
+        color: $gray;
+
+        &::after {
+          content: ',';
+        }
+
+        &.c-content-list__last-a {
+          &::after {
+            content: '';
+          }
+        }
+      }
+    }
   }
 
   a {
@@ -22,6 +51,10 @@
     &:hover {
       text-decoration: underline;
     }
+  }
+
+  span {
+    color: $gray;
   }
 
   &__sublist {
@@ -34,7 +67,20 @@
     }
   }
 
-  span {
-    color: $gray;
+  &__toggle {
+    display: none;
+    @include res(phone-tablet-only) {
+      display: inline-block;
+      position: absolute;
+      top: 9px;
+      right: 8px;
+      line-height: 0;
+      font-size: 0;
+      padding: 10px;
+
+      .c-icon {
+        fill: $gray-quote;
+      }
+    }
   }
 }
