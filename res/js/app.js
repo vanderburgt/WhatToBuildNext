@@ -1,14 +1,23 @@
 'use strict';
 (function () {
-  // sticky aside
-  window.onscroll = function() {myFunction()};
-  var navbar = document.getElementById('js-aside');
-  var sticky = 90; // var sticky = navbar.offsetTop;
-  function myFunction() {
-    if (window.pageYOffset >= sticky) {
-      navbar.classList.add('c-aside--sticky')
-    } else {
-      navbar.classList.remove('c-aside--sticky');
-    }
+
+  if ($('#js-aside').length) {
+    // sticky aside
+    $(document).scroll(function () {
+      var y = $(document).scrollTop();
+      var navbar = $("#js-aside");
+      if (y >= 110) {
+        navbar.addClass('c-aside--sticky');
+      } else {
+        navbar.removeClass('c-aside--sticky');
+      }
+    });
+
+    // reduce aside height if window scroll < 110px
+    $(document).ready(function () {
+      if ($(document).height() - $(window).height() < 110) {
+        $('#js-aside__inner').addClass('c-aside__inner--short');
+      }
+    });
   }
 })();

@@ -1,0 +1,30 @@
+.c-content-list {
+  color: $dark-gray;
+  list-style: none;
+  font-size: 15px;
+  line-height: 32px;
+  margin: 20px 0;
+
+  a {
+    color: $dark-gray;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__sublist {
+    color: $gray;
+    list-style: none;
+    margin: 0 0 0 5px;
+
+    a {
+      color: $gray;
+    }
+  }
+
+  span {
+    color: $gray;
+  }
+}
