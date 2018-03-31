@@ -21,12 +21,15 @@
 
     // hide last coma in Content list
     if ($('.c-content-list').length) {
-      $('.c-content-list').find('a').last().addClass('c-content-list__last-a');
+      $('.c-content-list').each(function (index, el) {
+        $(el).find('a').last().addClass('c-content-list__last-a')
+      });
     }
 
     // toggle Content list
     if ($('.c-content-list__toggle')) {
-      $('.c-content-list__toggle').on('click', function () {
+      $('.c-content-list__toggle').on('click', function (event) {
+        event.preventDefault();
         $(this).parent().toggleClass('c-content-list--collapsed');
       });
     }
