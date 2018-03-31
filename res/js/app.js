@@ -1,15 +1,14 @@
 'use strict';
 (function () {
-
+  // sticky aside
   if ($('#js-aside').length) {
-    // sticky aside
+    var aside = $("#js-aside");
     $(document).scroll(function () {
       var y = $(document).scrollTop();
-      var navbar = $("#js-aside");
       if (y >= 110) {
-        navbar.addClass('c-aside--sticky');
+        aside.addClass('c-aside--sticky');
       } else {
-        navbar.removeClass('c-aside--sticky');
+        aside.removeClass('c-aside--sticky');
       }
     });
 
