@@ -1,14 +1,11 @@
 .c-article {
-  margin: 25px 0 0;
-  @include res(desktop) {
-    margin: 40px 0 0;
-  }
+  order: 2;
 
   h2 {
     font-size: 19px;
     line-height: 50px;
     border-bottom: solid 1px $gray-border;
-    margin: 25px 0 10px;
+    margin: 20px 0 10px;
     @include res(desktop) {
       font-size: 26px;
       margin: 40px 0 15px;
@@ -34,7 +31,7 @@
   }
 
   a {
-    &:not(.c-icon-link) {
+    &:not(.c-icon-link):not(.c-btn) {
       color: $light-blue;
       text-decoration: none;
 
@@ -89,10 +86,12 @@
 
   &__control {
     float: right;
+    font-size: 0;
+    line-height: 0;
 
     .c-icon-link {
-      margin-left: 6px;
-      vertical-align: -10%;
+      margin: 16px 0 0 6px;
+      float: right;
     }
   }
 }

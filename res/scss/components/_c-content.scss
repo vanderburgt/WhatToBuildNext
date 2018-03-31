@@ -39,6 +39,11 @@
 
   &--aside {
     overflow: hidden;
+    display: flex;
+    flex-flow: column nowrap;
+    @include res(desktop) {
+      display: block;
+    }
 
     .c-content__post,
     .c-article {
