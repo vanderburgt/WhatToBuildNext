@@ -11,8 +11,16 @@
     background: $light-gray;
     border: solid 1px $gray-border3;
     border-radius: 3px;
-    padding: 20px 10px 20px 30px;
+    padding: 62px 10px 20px 30px;
     margin: 3px 0 20px;
+
+    &::before {
+      content: 'Content:';
+      position: absolute;
+      top: 5px;
+      left: 10px;
+      z-index: 1;
+    }
 
     &--collapsed {
       white-space: nowrap;
@@ -21,12 +29,21 @@
       padding: 5px 65px 5px 10px;
 
       &::before {
-        content: 'Content:';
+        position: static;
+      }
+
+      .c-content-list__toggle {
+        background: none;
+
+        .c-icon {
+          transform: rotate(0deg);
+        }
       }
 
       ul,
       li {
         display: inline;
+        margin: 0;
       }
 
       li > a {
@@ -74,20 +91,20 @@
       cursor: pointer;
       display: inline-block;
       position: absolute;
-      top: 9px;
-      right: 8px;
       line-height: 0;
       font-size: 0;
-      padding: 10px;
-
-      &:hover {
-        .c-icon {
-          fill: $black;
-        }
-      }
+      top: 0;
+      right: 0;
+      left: 0;
+      padding: 19px 18px;
+      height: 43px;
+      border-bottom: solid 1px $gray-border3;
+      background: darken($light-gray, 4%);
 
       .c-icon {
         fill: $gray-quote;
+        float: right;
+        transform: rotate(180deg);
       }
     }
   }
