@@ -40,6 +40,10 @@
       $('body').toggleClass('body__mm-active');
       $('#js-mm').toggleClass('c-mm--active');
     });
+    $('#js-mm__overlay').on('click', function () {
+      $('body').toggleClass('body__mm-active');
+      $('#js-mm').toggleClass('c-mm--active');
+    });
 
   });
 })(window, document);

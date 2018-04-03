@@ -3,9 +3,10 @@
   list-style: none;
   font-size: 15px;
   line-height: 32px;
-  margin: 20px 0;
+  margin: 20px 0 0;
   padding: 0;
   position: relative;
+  order: 2;
   @include res(phone-tablet-only) {
     background: $light-gray;
     border: solid 1px $gray-border3;
@@ -60,7 +61,7 @@
   &__sublist {
     color: $gray;
     list-style: none;
-    margin: 0 0 0 5px;
+    margin: 0 0 0 10px;
 
     a {
       color: $gray;

@@ -35,9 +35,24 @@
     line-height: 36px;
     text-decoration: none;
     margin: 0 0 0 44px;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      width: 0;
+      height: 2px;
+      background: $black;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+    }
 
     &:hover {
-      text-decoration: underline;
+      &::after {
+        width: 100%;
+      }
     }
   }
 }
