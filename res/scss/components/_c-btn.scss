@@ -16,9 +16,10 @@
   text-decoration: none;
   white-space: normal;
   transition: background .3s ease;
-
-  &:hover {
-    background: $green;
+  @include res(desktop) {
+    &:hover {
+      background: $green;
+    }
   }
 
   &__text {
