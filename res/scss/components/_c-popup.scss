@@ -1,0 +1,85 @@
+.c-popup {
+  background: $dark-transparent;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+
+  &__inner {
+    position: absolute;
+    top: 18%;
+    bottom: 0;
+    width: 100%;
+    background: $white;
+    max-width: 100%;
+    max-height: 95%;
+    overflow-y: auto;
+    @include res(tablet) {
+      top: 50%;
+      left: 50%;
+      bottom: inherit;
+      transform: translate(-50%, -50%);
+      width: 560px;
+    }
+
+    &--follow {
+      padding: 70px 20px 30px;
+      @include res(desktop) {
+        padding: 80px 30px 50px;
+      }
+    }
+  }
+
+  &__close {
+    position: absolute;
+    right: 12px;
+    top: 12px;
+  }
+
+  &__h1 {
+    font-size: 23px;
+    font-weight: 700;
+    line-height: 27px;
+    margin: 0;
+  }
+
+  &__p {
+    margin: 30px 0 0;
+    font-size: 15px;
+    line-height: 24px;
+    @include res(desktop) {
+      margin: 22px 0 0;
+    }
+  }
+
+  &__input {
+    width: 100%;
+    border: solid 1px $gray-border;
+    font-size: 14px;
+    line-height: 22px;
+    border-radius: 3px;
+    margin: 30px 0 0;
+    padding: 10px 13px;
+    @include res(desktop) {
+      margin: 22px 0 0;
+    }
+
+    &--error {
+      border-color: $red;
+    }
+  }
+
+  &__btn {
+    margin-top: 30px;
+    float: right;
+    @include res(desktop) {
+      margin-top: 25px;
+    }
+  }
+}
+
+.body--popup {
+  overflow: hidden;
+}
