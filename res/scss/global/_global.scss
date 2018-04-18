@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+::selection {
+  background: $light-blue;
+  color: $white;
+}
+
 html,
 body {
   height: 100%;
