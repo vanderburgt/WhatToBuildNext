@@ -2,19 +2,24 @@
 (function () {
   $(document).ready(function () {
     // sticky aside
+    function toggleAside() {
+      var y = $(document).scrollTop();
+      if (y >= $('#js-header').outerHeight() + 20) { //  header height + 20px (aside position top 60px-40px absolute/fixed)
+        aside.addClass('c-aside--sticky');
+      } else {
+        aside.removeClass('c-aside--sticky');
+      }
+    }
+
     if ($('#js-aside').length) {
       var aside = $("#js-aside");
+      toggleAside();
       $(document).scroll(function () {
-        var y = $(document).scrollTop();
-        if (y >= 110) {
-          aside.addClass('c-aside--sticky');
-        } else {
-          aside.removeClass('c-aside--sticky');
-        }
+        toggleAside();
       });
 
       // reduce aside height if window scroll < 110px
-      if ($(document).height() - $(window).height() < 110) {
+      if ($(document).height() - $(window).height() < $('#js-header').outerHeight() + 20) { // same like scroll
         $('#js-aside__inner').addClass('c-aside__inner--short');
       }
     }
