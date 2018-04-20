@@ -54,12 +54,12 @@
     if ($('#js-popup-follow').length) {
       $('.js-popup-follow-close, #js-popup-follow').on('click', function (e) {
         e.preventDefault();
-        $('#js-popup-follow').fadeOut(300)
+        $('#js-popup-follow').hide()
         $('body').removeClass('body-popup');
       });
       $('#js-follow').on('click', function (e) {
         e.preventDefault();
-        $('#js-popup-follow').fadeIn(300);
+        $('#js-popup-follow').show();
         $('body').addClass('body-popup');
       });
       $('#js-popup-follow-inner').on('click', function (e) {

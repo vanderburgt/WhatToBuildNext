@@ -7,3 +7,13 @@
     opacity: 1;
   }
 }
+
+@keyframes popup-zoom-in {
+  from {
+    transform: scale(.5);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
