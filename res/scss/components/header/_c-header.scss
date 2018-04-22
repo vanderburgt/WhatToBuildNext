@@ -1,6 +1,6 @@
 .c-header {
   @extend %container;
-  background: url('../img/header-bg.png') center top $blue-header;
+  background: url('../img/header-bg.svg') center top $blue-header;
   background-size: cover;
   @include res(desktop) {
   }

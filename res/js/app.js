@@ -1,6 +1,11 @@
 'use strict';
 (function () {
   $(document).ready(function () {
+    // set min height for content block excuted header+footer height
+    if ($('#js-content').length) {
+      $('#js-content').css('min-height', 'calc(100% - ' + ($('#js-header').outerHeight() + $('#js-footer').outerHeight()) + 'px)');
+    }
+
     // sticky aside
     function toggleAside() {
       var y = $(document).scrollTop();
@@ -73,5 +78,6 @@
         $('#js-follow-success').slideDown(300)
       });
     }
+
   });
 })(window, document);
