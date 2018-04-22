@@ -1,20 +1,22 @@
 <header id="js-header" class="c-header">
   <div class="c-header__inner">
-    <a class="c-header__logo" href="/">What To<br>Build Next</a>
+    <a class="c-header__logo c-header__logo--active" href="/"><img class="c-header__logo-img" src="assets/img/logo.png"
+                                                                   alt="What To Build Next">What To Build Next</a>
 
     <div class="c-header__right">
-      <div class="c-header__slogan">Understand Markets and Discover What To Build Next</div>
+      <div class="c-header__submenu"><img class="c-header__submenu-line" src="assets/img/line-submenu.png" alt=""><a
+        href="#">Advice</a></div>
 
-      <nav class="c-header__menu">
-        <a class="c-header__menu-a" href="#">Markets</a>
-        <a class="c-header__menu-a" href="#">Essays</a>
-        <a class="c-header__menu-a" href="#">Advice</a>
-        <a class="c-header__menu-a" href="contact.html">Contact</a>
-      </nav>
+      <ul class="c-header__menu">
+        <li><a href="#">Markets</a></li>
+        <li><a href="#">Essays</a></li>
+        <li><a class="c-header-link--active" href="advice.html">Advice</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </div>
 
     <div class="c-header__burger-btn">
-      <button id="js-c-burger" class="c-burger">
+      <button id="js-c-burger" class="c-burger c-burger--white">
         <span class="c-burger__line"></span>
       </button>
     </div>
@@ -36,7 +38,7 @@
             <ul class="c-mm__nav">
               <li class="c-mm__nav-li"><a class="c-mm__nav-a" href="#">Markets</a></li>
               <li class="c-mm__nav-li"><a class="c-mm__nav-a" href="#">Essays</a></li>
-              <li class="c-mm__nav-li"><a class="c-mm__nav-a" href="#">Advice</a></li>
+              <li class="c-mm__nav-li"><a class="c-mm__nav-a" href="advice.html">Advice</a></li>
               <li class="c-mm__nav-li"><a class="c-mm__nav-a" href="contact.html">Contact</a></li>
             </ul>
 
@@ -51,5 +53,9 @@
         </div>
       </div>
     </div>
+  </div>
+  <div class="c-header__bottom">
+    <h2 class="c-header__bottom-h2">Understand Markets and Discover What To Build Next</h2>
+    <h3 class="c-header__bottom-h3">Frequently-updated compendium of tech market trends and opportunities</h3>
   </div>
 </header>

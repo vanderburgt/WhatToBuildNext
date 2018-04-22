@@ -69,4 +69,15 @@
       transform: rotate(-45deg);
     }
   }
+
+  &--white {
+    .c-burger__line {
+      background-color: $white;
+
+      &::after,
+      &::before {
+        background-color: $white;
+      }
+    }
+  }
 }

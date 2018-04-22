@@ -24,8 +24,6 @@
     overflow-y: auto;
     @include res(tablet) {
       animation: popup-zoom-in .3s ease;
-      //top: 50%;
-      //left: 50%;
       position: relative;
       top: initial;
       bottom: initial;

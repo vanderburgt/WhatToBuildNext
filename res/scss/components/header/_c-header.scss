@@ -1,105 +1,181 @@
 .c-header {
   @extend %container;
-  height: 79px;
+  background: url('../img/header-bg.png') center top $blue-header;
+  background-size: cover;
   @include res(desktop) {
-    border-bottom: solid 1px $gray-border;
-    height: 90px;
   }
 
   &__inner {
-    background: $white;
-    height: 79px;
-    padding: 0;
     position: relative;
+    margin: 0 20px;
+    padding: 30px 0;
     @include res(desktop) {
-      height: 90px;
+      margin: 0 48px 0 30px;
+      padding: 30px 0;
     }
   }
 
   &__logo {
-    background: $light-blue;
     color: $white;
     display: inline-block;
-    float: left;
-    width: 173px;
-    height: 79px;
     font-family: $eina01-semibold;
     font-size: 18px;
     font-weight: 700;
     line-height: 18px;
-    padding: 28px 0 0 20px;
+    margin: 0;
+    padding: 0;
     text-decoration: none;
-    transition: background .3s ease;
+    width: 155px;
     @include res(desktop) {
-      width: 213px;
-      height: 90px;
-      font-size: 22px;
-      line-height: 20px;
-      padding: 35px 0 0 40px;
-    }
+      float: left;
+      font-size: 20px;
+      line-height: 17.5px;
+      padding: 0;
 
-    &:hover {
-      background: $blue;
+      &:hover,
+      &--active {
+        color: $blue-header-active;
+      }
     }
+  }
+
+  &__logo-img {
+    width: 35px;
+    height: 35px;
+    margin: 0 20px 0 0;
+    float: left;
   }
 
   &__right {
     display: none;
     @include res(desktop) {
-      display: block;
-      border-bottom: solid 1px $gray-border;
-      height: 90px;
-      margin: 0 40px 0 253px;
+      display: flex;
+      margin: 0 0 0 175px;
+      justify-content: space-between;
     }
   }
 
-  &__slogan {
-    color: $gray;
-    font-size: 15px;
-    padding: 36px 0 0;
+  &__submenu {
+    height: 35px;
+    padding: 0;
     float: left;
+    display: none;
+    @include res(desktop) {
+      display: block;
+    }
+
+    a {
+      color: $white;
+      font-family: $eina01-semibold;
+      font-size: 20px;
+      line-height: 35px;
+      text-decoration: none;
+
+      &:hover {
+        color: $blue-header-active;
+      }
+    }
+  }
+
+  &__submenu-line {
+    vertical-align: middle;
+    margin: -6px 20px 0 0;
   }
 
   &__menu {
     float: right;
     list-style: none;
     margin: 0;
-    padding: 36px 0 0;
-  }
+    padding: 16px 0 0;
+    list-style: none;
 
-  &__menu-a {
-    display: inline-block;
-    font-size: 15px;
-    color: $black;
-    text-decoration: none;
-    position: relative;
-    margin: 0 0 0 45px;
-
-    &::after {
-      content: '';
-      position: absolute;
-      bottom: -4px;
-      width: 0;
-      height: 2px;
-      background: $black;
-      left: 0;
-      right: 0;
-      margin: 0 auto;
+    li {
+      display: inline;
+      margin: 0;
+      padding: 0;
+      font-size: 15px;
+      line-height: 18px;
     }
 
-    &:hover {
+    a {
+      display: inline-block;
+      font-size: 15px;
+      line-height: 18px;
+      color: $white;
+      text-decoration: none;
+      position: relative;
+      margin: 0 0 0 40px;
       &::after {
-        width: 100%;
+        content: '';
+        position: absolute;
+        bottom: -4px;
+        width: 0;
+        height: 2px;
+        background: $white;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+      }
+
+      &.c-header-link--active {
+        color: $light-green;
+        &::after {
+          background: $light-green;
+        }
+      }
+
+      &:hover {
+        &::after {
+          width: 100%;
+        }
       }
     }
   }
 
   &__burger-btn {
     position: absolute;
-    top: 18px;
-    right: 15px;
+    top: 28px;
+    right: -5px;
     @include res(desktop) {
       display: none;
+    }
+  }
+
+  &__bottom {
+    margin: 0 20px;
+    padding: 30px 0;
+    text-align: center;
+    border-top: solid 1px $white-transparent-40;
+    @include res(desktop) {
+      margin: 0 48px 0 30px;
+      padding: 50px 0 80px;
+    }
+
+    &-h2 {
+      color: $white;
+      font-family: $eina01-semibold;
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 40px;
+      margin: 0;
+      padding: 0;
+      @include res(desktop) {
+        font-size: 20px;
+      }
+    }
+
+    &-h3 {
+      color: $blue-header-active;
+      color: $white-transparent-70;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 20px;
+      margin: 0;
+      padding: 0;
+      display: none;
+      @include res(desktop) {
+        display: block;
+      }
     }
   }
 }
