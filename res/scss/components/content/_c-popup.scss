@@ -62,19 +62,9 @@
   }
 
   &__input {
-    width: 100%;
-    border: solid 1px $gray-border;
-    font-size: 14px;
-    line-height: 22px;
-    border-radius: 3px;
     margin: 30px 0 0;
-    padding: 10px 13px;
     @include res(desktop) {
       margin: 22px 0 0;
-    }
-
-    &--error {
-      border-color: $red;
     }
   }
 

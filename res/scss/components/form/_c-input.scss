@@ -1,0 +1,12 @@
+.c-input {
+  width: 100%;
+  border: solid 1px $gray-border;
+  font-size: 14px;
+  line-height: normal;
+  border-radius: 3px;
+  padding: 13px;
+
+  &--error {
+    border-color: $red;
+  }
+}

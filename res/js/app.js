@@ -79,5 +79,12 @@
       });
     }
 
+    // Advice form submit
+    $('#js-advice-submit').on('click', function (e) {
+      e.preventDefault();
+      $('#js-advice-form').slideUp(300)
+      $('#js-advice-success').slideDown(300)
+    });
+
   });
 })(window, document);
