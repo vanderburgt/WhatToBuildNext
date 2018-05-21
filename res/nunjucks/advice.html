@@ -1,0 +1,89 @@
+{% extends 'templates/_default.html' %}
+{% block content %}
+<!-- Header -->
+{% include 'compositions/_header-advice.html' %}
+
+<!-- frontpage -->
+<div id="js-content" class="c-content">
+  <section class="c-advice">
+
+    <article class="c-advice__post">
+      <h1><img src="assets/img/advice-1.png" alt="Product Advice"><span>Product Advice</span></h1>
+
+      <h2>Working with product teams to help build and scale the product organization.</h2>
+      <ul>
+        <li>Think strategically about their products</li>
+        <li>Train team to use modern product management practices</li>
+        <li>Scale product organizations</li>
+        <li>Hire the right people</li>
+        <li>Work with remote teams</li>
+      </ul>
+    </article>
+
+    <article class="c-advice__post">
+      <h1><img src="assets/img/advice-2.png" alt="First Time Founders"><span>First Time Founders</span></h1>
+
+      <h2>Working with ambitious first time founders to build tech companies that they control.</h2>
+      <ul>
+        <li>Build funding thesis and deck</li>
+        <li>Recruit lean, global product team</li>
+        <li>Design product</li>
+        <li>Build MVP, product processes and mature team</li>
+      </ul>
+    </article>
+
+    <article class="c-advice__post">
+      <h1><img src="assets/img/advice-3.png" alt="Corporate Innovation"><span>Corporate Innovation</span></h1>
+
+      <h2>Working with companies to discover founders and create new ventures</h2>
+
+      <p>Build venture teams that:</p>
+      <ul>
+        <li>Captures new opportunities</li>
+        <li>Validates ideas like a startup</li>
+        <li>Assesses proposals like a VC</li>
+        <li>Connects to startups and learns from them</li>
+      </ul>
+    </article>
+  </section>
+
+  <section class="c-advice c-advice--subscribe">
+    <article class="c-advice__post c-advice__post--wide">
+      <h1><img src="assets/img/advice-4.png" alt="Ask Me Anything"><span>Ask Me Anything</span></h1>
+
+      <h2>With over a decade of building tech companies, teams and products, I am happy to help ambitious people. No
+        strings attached. Some examples of questions people ask:</h2>
+      <ul>
+        <li>What business models are changing my competitive space?</li>
+        <li>What technologies are impacting my business and how do they work?</li>
+        <li>What does it take to bank on those opportunities at low cost / risk?</li>
+        <li>How do we design and build scalable products?</li>
+        <li>What people should we hire?</li>
+        <li>How do I start a new tech-driven company?</li>
+      </ul>
+    </article>
+
+    <article class="c-advice__post">
+      <div id="js-advice-form">
+        <h1>Subscribe</h1>
+
+        <p>I send an email newsletter every month with my notes for the past week — articles, new products and a summary
+          of new posts here. You should sign up — it's pretty good.</p>
+
+        <input class="c-input c-advice__input" type="email" placeholder="Your email">
+
+        <button id="js-advice-submit" type="submit" class="c-btn c-advice__btn"><span class="c-btn__text">Sign up</span>
+        </button>
+      </div>
+      <div id="js-advice-success" style="display: none">
+        <h1>Welcome &#x1F389;</h1>
+        <p>Please confirm your subscription by clicking the link we just sent you.</p>
+      </div>
+    </article>
+  </section>
+
+  </section>
+
+</div>
+
+{% endblock %}

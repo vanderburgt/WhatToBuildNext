@@ -49,16 +49,17 @@
     list-style: none;
     width: 180px;
 
-    &-li {
+    li {
       color: $default-font-color;
       font-weight: 700;
       margin: 20px 0 0;
     }
 
-    &-a {
+    a {
       text-decoration: none;
       text-transform: uppercase;
       line-height: 22px;
+      font-family: $eina01-semibold;
       font-size: 17px;
       font-weight: 700;
       color: $default-font-color;
@@ -67,14 +68,14 @@
     &--bottom {
       margin-top: 20px;
 
-      .c-mm__nav-li {
+      li {
         margin: 20px 0 0;
       }
 
-      .c-mm__nav-a {
-        line-height: normal;
-        font-size: 15px;
-        font-weight: 400;
+      a {
+        line-height: 20px;
+        font-size: 14px;
+        font-weight: 700;
         letter-spacing: .1em;
       }
     }

@@ -3,7 +3,6 @@
   padding: 20px;
   @include res(desktop) {
     max-width: 1440px;
-    min-height: calc(100% - 191px);
     padding: 60px 40px;
     position: relative;
   }
@@ -14,6 +13,7 @@
     }
 
     h1 {
+      font-family: $eina01-semibold;
       font-size: 23px;
       font-weight: 700;
       line-height: 29px;

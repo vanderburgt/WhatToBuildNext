@@ -1,20 +1,30 @@
 'use strict';
 (function () {
   $(document).ready(function () {
+    // set min height for content block excuted header+footer height
+    if ($('#js-content').length) {
+      $('#js-content').css('min-height', 'calc(100% - ' + ($('#js-header').outerHeight() + $('#js-footer').outerHeight()) + 'px)');
+    }
+
     // sticky aside
+    function toggleAside() {
+      var y = $(document).scrollTop();
+      if (y >= $('#js-header').outerHeight() + 20) { //  header height + 20px (aside position top 60px-40px absolute/fixed)
+        aside.addClass('c-aside--sticky');
+      } else {
+        aside.removeClass('c-aside--sticky');
+      }
+    }
+
     if ($('#js-aside').length) {
       var aside = $("#js-aside");
+      toggleAside();
       $(document).scroll(function () {
-        var y = $(document).scrollTop();
-        if (y >= 110) {
-          aside.addClass('c-aside--sticky');
-        } else {
-          aside.removeClass('c-aside--sticky');
-        }
+        toggleAside();
       });
 
       // reduce aside height if window scroll < 110px
-      if ($(document).height() - $(window).height() < 110) {
+      if ($(document).height() - $(window).height() < $('#js-header').outerHeight() + 20) { // same like scroll
         $('#js-aside__inner').addClass('c-aside__inner--short');
       }
     }
@@ -49,12 +59,12 @@
     if ($('#js-popup-follow').length) {
       $('.js-popup-follow-close, #js-popup-follow').on('click', function (e) {
         e.preventDefault();
-        $('#js-popup-follow').fadeOut(300)
+        $('#js-popup-follow').hide()
         $('body').removeClass('body-popup');
       });
       $('#js-follow').on('click', function (e) {
         e.preventDefault();
-        $('#js-popup-follow').fadeIn(300);
+        $('#js-popup-follow').show();
         $('body').addClass('body-popup');
       });
       $('#js-popup-follow-inner').on('click', function (e) {
@@ -68,5 +78,13 @@
         $('#js-follow-success').slideDown(300)
       });
     }
+
+    // Advice form submit
+    $('#js-advice-submit').on('click', function (e) {
+      e.preventDefault();
+      $('#js-advice-form').slideUp(300)
+      $('#js-advice-success').slideDown(300)
+    });
+
   });
 })(window, document);

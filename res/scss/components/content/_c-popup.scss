@@ -1,4 +1,5 @@
 .c-popup {
+  animation: fade-in .3s ease;
   background: $dark-transparent;
   height: 100%;
   left: 0;
@@ -6,6 +7,11 @@
   top: 0;
   width: 100%;
   z-index: 10;
+  @include res(tablet) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
   &__inner {
     position: absolute;
@@ -17,10 +23,10 @@
     max-height: 95%;
     overflow-y: auto;
     @include res(tablet) {
-      top: 50%;
-      left: 50%;
-      bottom: inherit;
-      transform: translate(-50%, -50%);
+      animation: popup-zoom-in .3s ease;
+      position: relative;
+      top: initial;
+      bottom: initial;
       width: 560px;
     }
 
@@ -39,6 +45,7 @@
   }
 
   &__h1 {
+    font-family: $eina01-semibold;
     font-size: 23px;
     font-weight: 700;
     line-height: 27px;
@@ -55,19 +62,9 @@
   }
 
   &__input {
-    width: 100%;
-    border: solid 1px $gray-border;
-    font-size: 14px;
-    line-height: 22px;
-    border-radius: 3px;
     margin: 30px 0 0;
-    padding: 10px 13px;
     @include res(desktop) {
       margin: 22px 0 0;
-    }
-
-    &--error {
-      border-color: $red;
     }
   }
 
