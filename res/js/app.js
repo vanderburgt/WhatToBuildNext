@@ -47,12 +47,13 @@
     // burger menu toggle
     $('#js-c-burger, #js-c-burger-close').on('click', function (e) {
       e.preventDefault();
-      $('body').toggleClass('body__mm-active');
-      $('#js-mm').toggleClass('c-mm--active');
+      $('html, body').animate({
+        scrollTop: 0
+      }, 0);
+      $('body').toggleClass('body__mm--active');
     });
     $('#js-mm__overlay').on('click', function () {
-      $('body').toggleClass('body__mm-active');
-      $('#js-mm').toggleClass('c-mm--active');
+      $('body').toggleClass('body__mm--active');
     });
 
     // toggle follow popup
